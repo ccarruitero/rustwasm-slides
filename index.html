@@ -12,8 +12,8 @@
   <div class='reveal'>
     <div class='slides'>
       <section>
-        <h1>rust + wasm</h1>
-        <p>MozMeetup Lima 06-2019</p>
+        <h1>Rust and WebAssembly</h1>
+        <p>MozMeetup Lima 07-2019</p>
         <small>
           <a href="http://twitter.com/mozillaperu">
             <i class='fab fa-twitter'></i>
@@ -45,10 +45,7 @@
         <h3>wasm</h3>
         <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Web_Assembly_Logo.svg/220px-Web_Assembly_Logo.svg.png' />
         <p class='fragment'>
-          binary format for a virtual machine that can run on web
-        </p>
-        <p class='fragment'>
-          but not only the web
+          binary format for a virtual machine that can run on web <span class='fragment'>, but not designed strictly for web</span>
         </p>
       </section>
       <section>
@@ -72,8 +69,25 @@
         <img class='fragment' src='https://research.mozilla.org/files/2018/03/2018.02.22.WASM-diagram1-600x290.png' data-image-source='https://research.mozilla.org/webassembly/' />
       </section>
       <section>
-        <h3>compiling to wasm</h3>
-        <code class='hljs rust'>
+        <h3>Not only C | C++ | Rust</h3>
+        <p class='fragment'><a href='https://github.com/appcypher/awesome-wasm-langs'>wasm languages</a></p>
+      </section>
+      <section>
+        <h3>wat</h3>
+        <img class='fragment' src='images/wat.png' />
+        <p class='fragment'><a href='http://webassembly.github.io/spec/core/text/index.html'>spec</a></p>
+      </section>
+      <section>
+        <h3>Assembly Script</h3>
+        <img class='fragment' src='images/assemblyscript.png' />
+        <p class='fragment'><a href='https://assemblyscript.org'>assemblyscript.org</a></p>
+      </section>
+      <section>
+        <img src='https://mir-s3-cdn-cf.behance.net/project_modules/disp/fe36cc42774743.57ee5f329fae6.gif' />
+      </section>
+      <section>
+        <h3>rust compiling to wasm</h3>
+        <code class='fragment hljs rust' style='font-size: 30px;'>
           rustc src/main.rs --target=wasm32-unknown-unknown
         </code>
       </section>
@@ -81,6 +95,13 @@
         <h3>using in js</h3>
         <img class='fragment' src='images/instantiate.png' />
         <img class='fragment' src='images/instantiate_streaming.png' />
+      </section>
+      <section>
+        <h3>other web api interfaces</h3>
+        <li class='fragment'>Module</li>
+        <li class='fragment'>Instance</li>
+        <li class='fragment'>Table</li>
+        <li class='fragment'>Memory</li>
       </section>
       <section>
         <img src='https://raw.githubusercontent.com/rust-lang/www.rust-lang.org/master/static/images/wasm-ferris.png' />
@@ -103,12 +124,39 @@
         <p class='fragment'>wasm workflow tool!</p>
       </section>
       <section>
+        <img src='https://media.giphy.com/media/sIaMWJqrkdppm/giphy.gif' />
+      </section>
+      <section>
         <h3>binary toolkit</h3>
         <p><a href='https://github.com/webassembly/wabt'>webassembly/wabt</a></p>
       </section>
       <section>
+        <img src='https://wasi.dev/polyfill/WASI-small.png' />
+      </section>
+      <section>
+        <h3>WASI</h3>
+        <p class='fragment'>API for use outside web</p>
+      </section>
+      <section>
+        <h3><a href='https://wasmer.io/'>WASMER</a></h3>
+        <p class='fragment'>Universal WebAssembly runtime</p>
+      </section>
+      <section>
+        <h3><a href='https://wapm.io/'>WAPM</a></h3>
+        <p class='fragment'>wasm package manager</p>
+      </section>
+      <section>
+        <h3>what's next</h3>
+        <p class='fragment'><a href='https://webassembly.org/docs/future-features/'>Future Features</a></p>
+        <li class='fragment'><a href='https://github.com/WebAssembly/proposals/issues/12'>ECMAScript module integration</a></li>
+        <li class='fragment'><a href='https://github.com/WebAssembly/proposals/issues/16'>support garbage collection languages</a></li>
+      </section>
+      <section>
         <h2>references</h2>
-        <li><a href=''></a></li>
+        <li><a href='https://developer.mozilla.org/en-US/docs/WebAssembly'>WebAssembly MDN docs</a></li>
+        <li><a href='https://github.com/wasmerio/awesome-wasi'>Awesome WASI</a></li>
+        <li><a href='https://github.com/webassembly/wasi'>WASI repo</a></li>
+        <li><a href='https://github.com/xuu/wasm-tetris'>wasm-tetris</a></li>
       </section>
 
       <section>
